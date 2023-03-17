@@ -70,8 +70,6 @@ section {
 
 .header-container {
     display: flex; 
-    padding-top: 24px;
-    padding-bottom: 24px; 
 }
 
 .menu {
@@ -90,6 +88,9 @@ section {
 }
 
 .menu-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px; 
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -121,11 +122,12 @@ section {
     color: var(--secondary-color);
 }
 
-.contact-tel {
+.header-contact-items {
     margin-left: 40px;
 }
 
 .logo {
+    align-self: center;
     font-family: var(--logo-font);
     font-weight: 700;
     font-size: 26px;
@@ -145,15 +147,23 @@ section {
 }
 /* ========HERO======== */
 
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
 .main-title {
-margin-bottom: 30px;
-font-weight: 900;
-font-size: 44px;
-line-height: 1.36;
-text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .order-btn {
@@ -182,8 +192,26 @@ color: #FFFFFF;
 
 /* ========ADVANTAGES======== */
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 .advantages-list {
     display: flex;
+}
+
+.advantages-item {
+    width: 270px;
 }
 
 .advantages-item:not(:first-child) {
@@ -213,7 +241,14 @@ color: #FFFFFF;
 
 .about-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+
+.about-item {
+    margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 /* ========TEAM======== */
@@ -223,6 +258,11 @@ color: #FFFFFF;
     flex-wrap: wrap;
 }
 
+.team-item {
+    
+}
+
+
 .team-item:not(:nth-child(4n+1)) {
     margin-left: 30px;
 }
@@ -231,6 +271,7 @@ color: #FFFFFF;
     background-color: #FFFFFF;
     padding-top: 30px;
     padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-member {
@@ -266,10 +307,13 @@ color: #FFFFFF;
     color: #FFFFFF;
 }
 
-.footer-list {
+address {
     margin-top: 28px;
 }
 
+.footer-list-item {
+    margin-bottom: 12px;
+}
 .footer-contact {
     font-style: normal;
     font-weight: 400;
@@ -341,6 +385,7 @@ color: #FFFFFF;
 .portfolio-description {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
+    border-top: 0;
 }
 
 .portfolio-name {
